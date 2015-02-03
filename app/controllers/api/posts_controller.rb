@@ -3,15 +3,15 @@ module API
 	  respond_to :json
 	  
 	  def index
-	  	posts = Posts.all
+	  	posts = Post.all
 
 	  	respond_with posts
 	  end
 
 	  def show
-	  	posts = Post.find(params[:id])
+	  	post = Post.find(params[:id])
 
-	  	respond_with posts
+	  	respond_with post
 	  end
 
 	  def create
